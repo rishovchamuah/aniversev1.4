@@ -14,6 +14,12 @@ document.getElementById("continueWatching")
 const watchlistCount =
 document.getElementById("watchlistCount");
 const seasonAnime = document.getElementById("seasonAnime");
+const seasonAnime = document.getElementById("seasonAnime");
+const heroTitle = document.getElementById("heroTitle");
+const heroSynopsis = document.getElementById("heroSynopsis");
+const heroScore = document.getElementById("heroScore");
+const heroEpisodes = document.getElementById("heroEpisodes");
+const heroStatus = document.getElementById("heroStatus");
 
 let heroAnime = null;
 
