@@ -1,0 +1,89 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b0b12;
+color:#fff;
+min-height:100vh;
+}
+
+.background{
+position:fixed;
+inset:0;
+background:url("images/background.jpg") center/cover;
+filter:brightness(.25);
+z-index:-2;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(15,15,25,.5);
+backdrop-filter:blur(18px);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:24px;
+font-weight:700;
+color:#9b5cff;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+.settings{
+max-width:700px;
+margin:60px auto;
+padding:0 20px;
+}
+
+.settings h1{
+font-size:42px;
+margin-bottom:30px;
+}
+
+.settingCard{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+margin-bottom:20px;
+border-radius:18px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.settingCard label{
+font-size:18px;
+font-weight:600;
+}
+
+.settingCard input[type="checkbox"]{
+width:22px;
+height:22px;
+cursor:pointer;
+}
+
+.settingCard select{
+padding:10px 14px;
+border:none;
+border-radius:10px;
+background:#1d1d28;
+color:white;
+}

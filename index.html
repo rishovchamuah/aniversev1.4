@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="components/animeCard.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AniVerse</title>
+
+<link rel="stylesheet" href="home.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="components/toast.css">
+
+</head>
+
+<body>
+    
+    <div id="loader">
+
+    <div class="loaderLogo">
+
+        <div class="loaderCircle"></div>
+
+        <h1>AniVerse</h1>
+
+        <p>Loading your anime universe...</p>
+
+    </div>
+
+</div>
+
+<div class="background"></div>
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-play"></i>
+
+        <span>AniVerse</span>
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#" class="active">
+            Home
+        </a>
+
+        <a href="#">
+            Trending
+        </a>
+
+        <a href="#">
+            Watchlist
+        </a>
+
+        <a href="#">
+            Favorites
+        </a>
+
+    </div>
+
+    <div class="nav-right">
+
+        <div class="searchBox">
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+    <input
+        id="searchBox"
+        type="text"
+        placeholder="Search anime...">
+
+    <div id="searchResults"></div>
+
+</div>
+
+        <div class="watchlistIcon">
+
+    <button class="iconBtn"
+    onclick="location.href='watchlist.html'">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
+
+    <span id="watchlistCount">0</span>
+
+</div>
+
+        <button class="iconBtn">
+
+            <i class="fa-regular fa-user"></i>
+
+        </button>
+
+    </div>
+
+</nav>
+
+<header class="hero">
+
+    <div class="heroOverlay"></div>
+
+    <div class="heroContent">
+
+        <span class="featured">
+            ✨ Featured Anime
+        </span>
+
+        <h1 id="heroTitle">
+            Loading...
+        </h1>
+
+        <div class="heroInfo">
+
+            <span id="heroScore">
+                ⭐ --
+            </span>
+
+            <span id="heroEpisodes">
+                🎬 --
+            </span>
+
+            <span id="heroStatus">
+                📺 --
+            </span>
+
+        </div>
+
+        <p id="heroSynopsis">
+
+            Loading anime...
+
+        </p>
+
+        <div class="heroButtons">
+
+            <button class="watchBtn">
+
+                <i class="fa-solid fa-play"></i>
+
+                Watch Trailer
+
+            </button>
+
+            <button class="infoBtn">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                More Info
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="rowSection">
+
+    <div class="sectionHeader">
+
+        <h2>Browse by Genre</h2>
+
+    </div>
+
+    <div class="genreRow">
+
+        <button class="genreBtn" data-id="1">Action</button>
+        <button class="genreBtn" data-id="2">Adventure</button>
+        <button class="genreBtn" data-id="4">Comedy</button>
+        <button class="genreBtn" data-id="8">Drama</button>
+        <button class="genreBtn" data-id="10">Fantasy</button>
+        <button class="genreBtn" data-id="22">Romance</button>
+        <button class="genreBtn" data-id="24">Sci-Fi</button>
+        <button class="genreBtn" data-id="14">Horror</button>
+
+    </div>
+
+</section>
+
+<section class="rowSection">
+
+    <div class="sectionHeader">
+
+        <h2>Trending Now</h2>
+
+        <a href="browse.html?type=trending">
+View All
+</a>
+
+    </div>
+
+    <div id="trending" class="animeRow"></div>
+
+</section>
+
+<section class="rowSection">
+    <div class="sectionHeader">
+        <h2>Top Rated</h2>
+        
+        <a href="browse.html?type=top">
+View All
+</a>
+
+    </div>
+
+    <div id="topAnime" class="animeRow"></div>
+</section>
+
+<section class="rowSection">
+
+    <div class="sectionHeader">
+
+        <h2>Recently Viewed</h2>
+
+        <a href="#">View All</a>
+
+    </div>
+
+    <div id="recentAnime" class="animeRow"></div>
+
+</section>
+
+<section class="rowSection">
+
+    <div class="sectionHeader">
+
+        <h2>Continue Watching</h2>
+
+        <a href="#">Continue</a>
+
+    </div>
+
+    <div id="continueWatching" class="animeRow"></div>
+
+</section>
+
+<section class="rowSection">
+
+    <div class="sectionHeader">
+
+        <h2>New This Season</h2>
+
+        <a href="browse.html?type=season">
+View All
+</a>
+
+    </div>
+
+    <div id="seasonAnime" class="animeRow"></div>
+
+</section>
+
+<section class="rowSection">
+    <div class="sectionHeader">
+        <h2>Random Pick</h2>
+        <a href="browse.html?type=random">
+View All
+</a>
+    </div>
+
+    <div id="randomAnime" class="animeRow"></div>
+</section>
+
+<script src="components/toast.js"></script>
+<script src="components/heroSlider.js"></script>
+<script src="home.js"></script>
+
+</body>
+
+</html>

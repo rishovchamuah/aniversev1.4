@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AniVerse | Favorites</title>
+
+<link rel="stylesheet" href="favorites.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="components/animeCard.css">
+
+  <link rel="stylesheet" href="components/toast.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="overlay"></div>
+
+<header class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-heart"></i>
+
+<span>AniVerse</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">
+
+<i class="fa-solid fa-house"></i>
+
+</a>
+
+<a href="watchlist.html">
+
+<i class="fa-solid fa-bookmark"></i>
+
+</a>
+
+<a href="favorites.html" class="active">
+
+<i class="fa-solid fa-heart"></i>
+
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>My Favorites</h1>
+
+<p id="favoriteCount">0 Anime</p>
+
+<input
+id="searchFavorites"
+type="text"
+placeholder="Search favorites...">
+
+</section>
+
+<section
+id="favoriteGrid"
+class="favoriteGrid">
+
+</section>
+
+<section
+id="emptyState"
+class="emptyState">
+
+<i class="fa-solid fa-heart-crack"></i>
+
+<h2>No Favorites Yet</h2>
+
+<p>Add anime using the heart button.</p>
+
+<a href="index.html">
+
+Explore Anime
+
+</a>
+
+</section>
+
+<script src="components/toast.js"></script>
+<script src="favorites.js"></script>
+
+</body>
+
+</html>

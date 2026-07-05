@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AniVerse | Anime</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="anime.css">
+
+<link rel="stylesheet" href="components/toast.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="overlay"></div>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-circle-play"></i>
+
+<span>AniVerse</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">
+
+<i class="fa-solid fa-house"></i>
+
+Home
+
+</a>
+
+<a href="watchlist.html">
+
+<i class="fa-solid fa-heart"></i>
+
+Watchlist
+
+</a>
+
+<a href="profile.html">
+
+<i class="fa-solid fa-user"></i>
+
+Profile
+
+</a>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="poster">
+
+<img
+id="poster"
+alt="Anime Poster">
+
+</div>
+
+<div class="info">
+
+<div class="topBadge">
+
+FEATURED ANIME
+
+</div>
+
+<h1 id="title">
+
+Loading...
+
+</h1>
+
+<div class="meta">
+
+<span id="score"></span>
+
+<span id="episodes"></span>
+
+<span id="status"></span>
+
+<span id="year"></span>
+
+</div>
+
+<div id="genres"
+class="genres">
+
+</div>
+
+<div class="statsGrid">
+
+<div class="statCard">
+
+<h4>Rank</h4>
+
+<p id="rank">
+
+--
+
+</p>
+
+</div>
+
+<div class="statCard">
+
+<h4>Popularity</h4>
+
+<p id="popularity">
+
+--
+
+</p>
+
+</div>
+
+<div class="statCard">
+
+<h4>Members</h4>
+
+<p id="members">
+
+--
+
+</p>
+
+</div>
+
+<div class="statCard">
+
+<h4>Duration</h4>
+
+<p id="duration">
+
+--
+
+</p>
+
+</div>
+
+</div>
+
+<h2 class="sectionTitle">
+
+Synopsis
+
+</h2>
+
+<p id="synopsis">
+
+Loading...
+
+</p>
+
+<div class="buttons">
+
+<button id="watchTrailer">
+
+<i class="fa-solid fa-play"></i>
+
+Watch Trailer
+
+</button>
+
+<button id="watchlistBtn">
+
+<i class="fa-regular fa-heart"></i>
+
+Add to Watchlist
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CHARACTERS ================= -->
+
+<section class="characterSection">
+
+    <div class="sectionHeader">
+
+        <h2>
+
+            <i class="fa-solid fa-users"></i>
+
+            Characters
+
+        </h2>
+
+    </div>
+
+    <div id="characterList" class="characterRow">
+
+    </div>
+
+</section>
+
+<!-- ================= RECOMMENDATIONS ================= -->
+
+<section class="recommendSection">
+
+    <div class="sectionHeader">
+
+        <h2>
+
+            <i class="fa-solid fa-fire"></i>
+
+            Recommended Anime
+
+        </h2>
+
+    </div>
+
+    <div id="recommendList" class="recommendRow">
+
+    </div>
+
+</section>
+
+<!-- ================= INFORMATION ================= -->
+
+<section class="extraInfo">
+
+    <div class="infoCard">
+
+        <h3>
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            Information
+
+        </h3>
+
+        <div class="infoGrid">
+
+            <div>
+
+                <span>Studio</span>
+
+                <p id="studio">Loading...</p>
+
+            </div>
+
+            <div>
+
+                <span>Season</span>
+
+                <p id="season">Loading...</p>
+
+            </div>
+
+            <div>
+
+                <span>Source</span>
+
+                <p id="source">Loading...</p>
+
+            </div>
+
+            <div>
+
+                <span>Rating</span>
+
+                <p id="rating">Loading...</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footerLogo">
+
+        <i class="fa-solid fa-circle-play"></i>
+
+        <span>AniVerse</span>
+
+    </div>
+
+    <p>
+
+        Discover. Track. Enjoy.
+
+    </p>
+
+</footer>
+
+<!-- ================= TRAILER MODAL ================= -->
+
+<div id="trailerModal" class="trailerModal">
+
+    <div class="trailerContainer">
+
+        <button id="closeTrailer">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <iframe
+            id="trailerFrame"
+            src=""
+            allowfullscreen
+            allow="autoplay; encrypted-media">
+        </iframe>
+
+    </div>
+
+</div>
+
+<!-- =================  ================= -->
+
+<div id="loader">
+
+    <div class="loaderContent">
+
+        <div class="loaderCircle"></div>
+
+        <h1>
+
+            <i class="fa-solid fa-circle-play"></i>
+
+            AniVerse
+
+        </h1>
+
+        <p>
+
+            Loading Anime...
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="backToTop">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="components/toast.js"></script>
+<script src="anime.js"></script>
+
+</body>
+
+</html>

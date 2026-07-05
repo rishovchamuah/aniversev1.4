@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AniVerse | Watchlist</title>
+
+    <link rel="stylesheet" href="watchlist.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        
+      <link rel="stylesheet" href="components/toast.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background"></div>
+    <div class="overlay"></div>
+
+    <!-- Navbar -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-dragon"></i>
+
+            <span>AniVerse</span>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+
+            <a href="watchlist.html" class="active">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <h1>My Watchlist</h1>
+
+        <p id="animeCount">0 Anime Saved</p>
+        
+        <div class="sectionHeader">
+
+    <h2>My Watchlist</h2>
+
+    <span id="watchlistCount">0 Anime</span>
+
+</div>
+
+        <button id="clearWatchlist">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Clear Watchlist
+
+        </button>
+        
+        <select id="sortWatchlist">
+            <input
+id="searchWatchlist"
+type="text"
+placeholder="Search your watchlist...">
+
+    <option value="recent">Recently Added</option>
+
+    <option value="title">Title (A-Z)</option>
+
+    <option value="score">Highest Score</option>
+
+</select>
+
+    </section>
+
+    <!-- Watchlist Grid -->
+
+    <section id="watchlistGrid" class="watchlistGrid">
+
+    </section>
+
+    <!-- Empty State -->
+
+    <section id="emptyState" class="emptyState">
+
+        <i class="fa-solid fa-film"></i>
+
+        <h2>Your Watchlist is Empty</h2>
+
+<p>
+Start exploring anime and save your favorites to watch later.
+</p>
+
+        <a href="index.html" class="exploreBtn">
+
+            Browse Anime
+
+        </a>
+
+    </section>
+
+<div id="toast"></div>
+
+<script src="components/toast.js"></script>
+<script src="watchlist.js"></script>
+
+</body>
+
+</html>
