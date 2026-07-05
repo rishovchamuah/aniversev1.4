@@ -171,7 +171,7 @@ async function loadTrending(){
 
 async function loadTop(){
 
-showSkeleton(trending);
+showSkeleton(topAnime);
 
     const res =
     await fetch("https://api.jikan.moe/v4/top/anime");
@@ -188,7 +188,7 @@ showSkeleton(trending);
 
 async function loadSeason(){
     
-    showSkeleton(trending);
+    showSkeleton(seasonAnime);
 
     const res =
     await fetch("https://api.jikan.moe/v4/seasons/now");
@@ -208,7 +208,7 @@ async function loadSeason(){
 
 async function loadRandom(){
     
-    showSkeleton(trending);
+    showSkeleton(randomAnime);
 
     const res =
     await fetch("https://api.jikan.moe/v4/random/anime");
@@ -480,21 +480,24 @@ container.innerHTML+=
 
 
 
-loadHeroSlider();
+(async () => {
+    try {
+        await Promise.all([
+            loadHeroSlider(),
+            loadTrending(),
+            loadTop(),
+            loadRandom(),
+            loadSeason()
+        ]);
 
-loadTrending();
-
-loadTop();
-
-loadRandom();
-
-loadSeason();
-
-loadRecentAnime();
-
-loadContinueWatching();
-
-updateWatchlistCount();
+        loadRecentAnime();
+        loadContinueWatching();
+        updateWatchlistCount();
+    } catch (err) {
+        console.error(err);
+        if (loader) loader.style.display = "none";
+    }
+})();
 
 window.addEventListener("load",()=>{
 
