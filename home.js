@@ -13,6 +13,7 @@ const continueWatching =
 document.getElementById("continueWatching")
 const watchlistCount =
 document.getElementById("watchlistCount");
+const seasonAnime = document.getElementById("seasonAnime");
 
 let heroAnime = null;
 
